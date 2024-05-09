@@ -84,7 +84,7 @@ const Register = () => {
       setCharacterError(true);
     } else {
       try {
-        await axios.post("http://localhost:8090/api/register", {
+        await axios.post("https://csc-330-server.onrender.com/api/register", {
           username,
           password,
           gender,
@@ -229,7 +229,7 @@ const Login = () => {
       } else if (password === "") {
         setPasswordError(true);
       } else {
-        const result = await axios.post("http://localhost:8090/api/login", {
+        const result = await axios.post("https://csc-330-server.onrender.com/api/login", {
           username,
           password,
         });
