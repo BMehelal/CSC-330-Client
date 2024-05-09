@@ -5,7 +5,6 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { IShopContext, ShopContext } from "../../context/shop-context";
 import {
-  Alert,
   AppBar,
   Avatar,
   Button,

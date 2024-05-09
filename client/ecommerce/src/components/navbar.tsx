@@ -3,31 +3,17 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { IShopContext, ShopContext } from "../context/shop-context";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { makeStyles } from "mui-styles-hook";
+
 import {
   AppBar,
   Avatar,
   Button,
-  Stack,
   Toolbar,
   Typography,
-  colors,
   styled,
   Link,
 } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  link: {
-    color: "#FAF9F6",
-    textDecoration: "none",
-    marginRight: 20,
-    fontSize: "1.5rem",
-    transition: "color 0.4s",
-    "&:hover": {
-      color: "#b464b1",
-    },
-  },
-}));
 export const NavBar = () => {
   // ADD THE LOGOUT LOGIC
   const [_, setCookies] = useCookies(["access_token"]);
@@ -55,7 +41,7 @@ export const NavBar = () => {
       <StyledAppBar position="static" sx={{ backgroundColor: "#1A1A1A", p: 2 }}>
         <Toolbar>
           <Avatar
-            sx={{weight: 60, height: 50, m: 1 }}
+            sx={{ weight: 60, height: 50, m: 1 }}
             src="https://i.ibb.co/mCJMXmg/Relm-removebg-preview.png"
           ></Avatar>
           <Typography
